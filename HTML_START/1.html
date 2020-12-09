@@ -4,12 +4,8 @@
 	<title>WEB1 - html</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<h1><a href="index.html">WEB</a></h1>
-	<input type="button" value="night"
-	onclick="
-
+	<script>
+	function nightDayHandler(self){
 	var target = document.querySelector('body');
 
 	if(this.value === 'night'){
@@ -19,11 +15,11 @@
  
 	var alist = document.querySelectorAll('a');
 	var i = 0;
-	while(i < alist.length){
-    console.log(alist[i]);
-    alist[i].style.color = 'powderblue';
-    i = i+1;
-}
+		while(i < alist.length){
+    			console.log(alist[i]);
+    			alist[i].style.color = 'powderblue';
+    			i = i+1;
+		}
 	} else {
 	target.style.backgroundColor='white';
 	target.style.color='black';
@@ -31,13 +27,18 @@
  
 	var alist = document.querySelectorAll('a');
 	var i = 0;
-	while(i < alist.length){
-    console.log(alist[i]);
-    alist[i].style.color = 'blue';
-    i = i+1;
+		while(i < alist.length){
+    			console.log(alist[i]);
+    			alist[i].style.color = 'blue';
+    			i = i+1;
+		}
 	}
 }
-	">
+	</script>
+</head>
+<body>
+	<h1><a href="index.html">WEB</a></h1>
+	<input type="button" value="night" onclick="nightDayHandler(this)">
 	<div id="grid">
 		<ol>
 			<li><a href="1.html">HTML</a></li>
@@ -55,17 +56,6 @@
 		</p>
 		</div>
 	</div>
-	<input type="button" value="night" onclick="
-	var target = document.querySelector('body');
-	if(this.value === 'night'){
-	target.style.backgroundColor='black';
-	target.style.color='white';
-	this.value = 'day';
-	} else {
-	target.style.backgroundColor='white';
-	target.style.color='black';
-	this.value = 'night';
-	}
-	">
+	<input type="button" value="night" onclick="nightDayHandler(this)">
 </body>
 </html>
