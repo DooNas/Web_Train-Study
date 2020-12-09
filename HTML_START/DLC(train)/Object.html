@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--객체의 쓰기와 읽기-->
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Object</h1>
+		<h2>Create</h2>
+		<script>
+			var coworkers={
+				//"이름" : "정보"
+				"programmer": "egoing",
+				"designer":"leexche"
+			};
+			document.write("programmer : "+coworkers.programmer+"<br>");
+			document.write("designer : "+coworkers.designer+"<br>");
+										//해당 객체의 이름 출력
+			coworkers.bookkeeper="duru";
+			//즉석에서 이름와 정보를 객체에 입력(방법1)
+			document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+			
+			coworkers["data scientist"]="taeho";
+			//죽석에서 이름과 정보를 객체에 입력(방법2)
+			document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+		</script>
+	</body>
+</html>
